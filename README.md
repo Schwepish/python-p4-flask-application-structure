@@ -103,7 +103,7 @@ decorator:
 
 @app.route('/')
 def index():
-    return '<h1>Welcome to my page!</h1>'
+    return '<h1>Welcome to my app!</h1>'
 
 ```
 
@@ -236,12 +236,9 @@ $ flask run
 Navigate to `http://127.0.0.1:5555` and you should see the index for our
 application:
 
-![Webpage that says "Welcome to my page!"](
+![Webpage that says "Welcome to my app!"](
 https://curriculum-content.s3.amazonaws.com/python/flask-application-structure-1.png
 )
-
-> **NOTE: "localhost" is the plain-English version of 127.0.0.1 on most
-> machines. You will often see the two used interchangeably.**
 
 Add a username to the URL. Now you should see something like this:
 
@@ -283,6 +280,12 @@ Running from a script isn't quite as Flasky, but it keeps all of our
 configuration in sight. We also still have access to these Flask tools as
 written, because `flask run` and `flask shell` look for `app.py` by default!
 
+> **Note: We don't use the Flask shell often in this curriculum because of the
+> dependencies we introduce throughout Phase 4- `ipdb` scripts provide us a bit
+> more flexibility in most of our use cases. We will discuss the Flask shell and
+> its benefits a bit later on in this module, and we encourage you to dig deeper
+> to see if it will be a valuable tool for you in your own development.**
+
 ***
 
 ## Conclusion
@@ -302,7 +305,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Welcome to my page!</h1>'
+    return '<h1>Welcome to my app!</h1>'
 
 @app.route('/<string:username>')
 def user(username):
